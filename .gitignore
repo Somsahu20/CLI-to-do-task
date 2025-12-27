@@ -1,0 +1,4 @@
+.env
+alembic.ini
+./app/__pycache__
+./alembic/__pycache__
