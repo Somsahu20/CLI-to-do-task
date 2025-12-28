@@ -7,7 +7,12 @@ class CreateTask(BaseModel):
 
 class ReturnTask(CreateTask):
     id: int
-    created_at: datetime
+    # created_at: datetime
     completed: bool
 
     model_config = ConfigDict(from_attributes=True)
+
+class UpdateTask(BaseModel):
+    title: str | None = None
+    content: str | None = None
+    completed: bool | None = None

@@ -16,6 +16,9 @@ class Tasks(Base):
     created_at: Mapped[datetime] = mapped_column(TIMESTAMP(timezone=True), server_default=text("now()"), nullable=False)
     completed: Mapped[bool] = mapped_column(nullable=False, server_default='false')
 
+    def to_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
+
 
 
 

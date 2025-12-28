@@ -2,3 +2,4 @@
 alembic.ini
 ./app/__pycache__
 ./alembic/__pycache__
+./app/routers/__pycache__
